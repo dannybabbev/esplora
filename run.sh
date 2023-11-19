@@ -108,6 +108,11 @@ else
   ELECTRS_ARGS="$ELECTRS_ARGS -vv"
 fi
 
+LOG_FILTERS=${LOG_FILTERS}
+if [ -n "$LOG_FILTERS" ]; then
+    ELECTRS_ARGS="$ELECTRS_ARGS --log-filters $LOG_FILTERS"
+fi
+
 if [[ "$DAEMON-$NETWORK" = "bitcoin-mainnet" && -z "$NO_PRECACHE" ]]; then
     ELECTRS_ARGS="$ELECTRS_ARGS --precache-scripts /srv/explorer/popular-scripts.txt"
 fi
