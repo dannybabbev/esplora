@@ -9,8 +9,6 @@ mempoolfullrbf=1
 blocknotify=pkill -USR1 electrs
 maxmempool=1000
 
-rpcuser=hunter 
-rpcpassword=hunter
 rpcallowip=0.0.0.0/0
 rpcbind=0.0.0.0
 rpcport=8332
